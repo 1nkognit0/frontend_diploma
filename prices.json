@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "currency": "RUB",
+    "updated_at": "2026-04-27"
+  },
+  "ac": {
+    "standard_install": {
+      "price": 15000,
+      "included_route_m": 3,
+      "included_cable_channel_m": 1
+    },
+    "extra_route_per_m": 1500,
+    "plug_install": 600
+  },
+  "electric": {
+    "per_point": 1800,
+    "chasing_per_point": 900,
+    "material_multiplier": {
+      "concrete": 1.35,
+      "brick": 1.15,
+      "aerated_concrete": 1.0
+    }
+  },
+  "plumbing": {
+    "per_fixture_point": 2200,
+    "pipe_per_m": 650,
+    "chasing_per_point": 900,
+    "material_multiplier": {
+      "concrete": 1.35,
+      "brick": 1.15,
+      "aerated_concrete": 1.0
+    }
+  }
+}

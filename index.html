@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Сайт" />
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header__row">
+        <div class="flex"> 
+        <p class="name"> D-SYSTEMS
+            ENGINEERING </p>
+        <a class="brand" href="index.html" aria-label="На главную">
+          <img src="img/logo.png" alt="logo" class="brand__logo">
+        </a></div>
+
+        <nav class="header-nav" aria-label="Основное меню">
+          <a class="header-nav__link" href="more.html?type=elect">Электромонтаж</a>
+          <a class="header-nav__link" href="more.html?type=voda">Водоснабжение</a>
+          <a class="header-nav__link" href="more.html?type=ac">Кондиционеры</a>
+          <a class="header-nav__link" href="request.html">Заявка</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <h2>НАМ ДОВЕРЯЮТ!</h2>
+      <p>Давно хотите сделать ремонт  или что-нибудь починить?  Не откладывайте на потом!
+        Мы предлагаем вам широкий спектр услуг: установка и обслуживание кондиционеров , электромантажные работы,  услуги сантехники и множество других услуг!  Звоните или пишите нам и мы с радостью возьмемся за вашу проблему ! </p>
+        <p class="intro-cta">Удобнее описать задачу текстом? <a href="request.html">Оставьте заявку</a> — перезвоним и согласуем выезд.</p>
+        <div class="line"></div>
+        <div class="services">
+            <div class="service">
+                <p class="blue">Только проверенные и качественные материалы</p>
+                <p>Проверенные поставщики </p>
+                <p class="blue">Гарантия 3 года на работу</p>
+                <p>Широкий спектор услуг</p>
+            </div>
+            <div class="service">
+                <p>Квалифицированные специалисты </p>
+                <p class="blue">Связь со специалистом 24/7</p>
+                <p>Заключение  оффициальных договоров </p>
+                <p class="blue">Бесплатный выезд на замер</p>
+            </div>
+
+        </div>
+        <div class="line"></div>
+
+        <div class="yslugi">
+          <button type="button" aria-label="Предыдущая услуга" data-dir="-1">‹</button>
+          <div data-view>
+            <div data-track>
+              <div class="card">
+                <div class="ca">
+                  <h2>Электромонтаж</h2>
+                  <p>Электромонтаж,<br> подсветка дома, установка и <br>восстановление розеток. Качественно и надежно.</p>
+                  <a href="more.html?type=elect"><span>Подробнее</span></a>
+                </div>
+                <img src="img/elect.jpg" alt="Электромонтаж" />
+              </div>
+              <div class="card">
+                <div class="ca">
+                  <h2>Водоснабжение</h2>
+                  <p>Замена и ремонт труб, установка сантехники, <br>обслуживание систем водоснабжения.</p>
+                  <a href="more.html?type=voda"><span>Подробнее</span></a>
+                </div>
+                <img src="img/sant.jpg" alt="Водоснабжение" />
+              </div>
+              <div class="card">
+                <div class="ca">
+                  <h2>Кондиционеры</h2>
+                  <p>Подбор, установка <br>и обслуживание кондиционеров. <br>Чистка и восстановление работоспособности.</p>
+                  <a href="more.html?type=ac"><span>Подробнее</span></a>
+                </div>
+                <img src="img/kondey.jpg" alt="Кондиционеры" />
+              </div>
+            </div>
+          </div>
+          <button type="button" aria-label="Следующая услуга" data-dir="1">›</button>
+      </div>
+
+        <section class="calc" data-calc id="calc">
+          <div class="calc__head">
+            <h2 class="calc__title">Калькулятор примерной стоимости</h2>
+            <p class="calc__subtitle">Сумма ориентировочная. Точную стоимость уточним после замера и согласования.</p>
+          </div>
+
+          <div class="calc__grid">
+            <div class="calc__panel">
+              <label class="calc__label" for="calc-service">Услуга</label>
+              <select class="calc__control" id="calc-service">
+                <option value="ac">Кондиционер</option>
+                <option value="electric">Электрика</option>
+                <option value="plumbing">Сантехника</option>
+              </select>
+
+              <div class="calc__fieldset" id="calc-panel-ac">
+                <div class="calc__row">
+                  <label class="calc__label" for="ac-route-m">Длина трассы, м</label>
+                  <input class="calc__control" id="ac-route-m" type="number" min="0" step="0.5" value="3" />
+                </div>
+                <label class="calc__check">
+                  <input id="ac-plug" type="checkbox" />
+                  <span>Установка вилки для подключения</span>
+                </label>
+              </div>
+
+              <div class="calc__fieldset" id="calc-panel-electric" hidden>
+                <div class="calc__row">
+                  <label class="calc__label" for="el-points">Количество точек</label>
+                  <input class="calc__control" id="el-points" type="number" min="0" step="1" value="5" />
+                </div>
+                <label class="calc__check">
+                  <input id="el-chasing" type="checkbox" checked />
+                  <span>Нужно штробление</span>
+                </label>
+                <label class="calc__check">
+                  <input id="el-panel" type="checkbox" />
+                  <span>Сборка щита</span>
+                </label>
+                <div class="calc__row">
+                  <label class="calc__label" for="el-material">Материал</label>
+                  <select class="calc__control" id="el-material">
+                    <option value="concrete">Бетон</option>
+                    <option value="brick">Кирпич</option>
+                    <option value="aerated_concrete" selected>Газоблок</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="calc__fieldset" id="calc-panel-plumbing" hidden>
+                <div class="calc__row">
+                  <label class="calc__label" for="pl-fixtures">Количество точек сантехники</label>
+                  <input class="calc__control" id="pl-fixtures" type="number" min="0" step="1" value="3" />
+                </div>
+                <div class="calc__row">
+                  <label class="calc__label" for="pl-pipe-m">Длина трубы/магистрали, м</label>
+                  <input class="calc__control" id="pl-pipe-m" type="number" min="0" step="0.5" value="5" />
+                </div>
+                <label class="calc__check">
+                  <input id="pl-chasing" type="checkbox" checked />
+                  <span>Нужно штробление</span>
+                </label>
+                <div class="calc__row">
+                  <label class="calc__label" for="pl-material">Материал</label>
+                  <select class="calc__control" id="pl-material">
+                    <option value="concrete">Бетон</option>
+                    <option value="brick">Кирпич</option>
+                    <option value="aerated_concrete" selected>Газоблок</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="calc__result">
+              <div class="calc__total">
+                <div class="calc__total-label">Итого (<span id="calc-result-service">—</span>)</div>
+                <div class="calc__total-value" id="calc-result-total">—</div>
+              </div>
+
+              <div class="calc__breakdown" id="calc-breakdown"></div>
+
+              <div class="calc__cta">
+                <a class="calc__btn calc__btn--link" href="request.html">Оставить заявку</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="faq" id="faq">
+          <h2>Вопрос‑ответ</h2>
+          <details>
+            <summary>Сколько времени занимает выезд и оценка?</summary>
+            <p>Обычно связываемся в течение дня и согласуем удобное время. На месте уточняем детали и даём ориентир по срокам.</p>
+          </details>
+          <details>
+            <summary>Вы работаете по договору и даёте гарантию?</summary>
+            <p>Да. Согласуем объём работ, фиксируем условия, после чего выполняем работу и даём гарантию.</p>
+          </details>
+          <details>
+            <summary>Можно ли оставить заявку онлайн?</summary>
+            <p>Да — перейдите на страницу <a href="request.html">заявки</a> и опишите задачу. Мы перезвоним и уточним детали.</p>
+          </details>
+        </section>
+    </main>
+
+    
+
+    <footer class="site-footer">
+      <small>© <time datetime="2026">2026</time> D-SYSTEMS ENGINEERING</small><br />
+      <small><a href="index.html#calc">Калькулятор</a> · <a href="index.html">Главная</a> · <a href="request.html">Оставить заявку</a> · <a href="../backend/templates/admin.html">Админ панель</a></small>
+    </footer>
+
+    <script>
+      (() => {
+        const root = document.querySelector(".yslugi");
+        if (!root) return;
+
+        const track = root.querySelector("[data-track]");
+        if (!track) return;
+
+        const count = track.children.length;
+        if (count === 0) return;
+
+        let i = 0;
+        const render = () => {
+          track.style.transform = `translateX(${-i * 100}%)`;
+        };
+        render();
+
+        root.addEventListener("click", (e) => {
+          const btn = e.target.closest("button[data-dir]");
+          if (!btn) return;
+          const dir = Number(btn.dataset.dir || 0);
+          if (!dir) return;
+          i = (i + dir + count) % count;
+          render();
+        });
+      })();
+    </script>
+    <script src="js/calc.js" defer></script>
+  </body>
+</html>

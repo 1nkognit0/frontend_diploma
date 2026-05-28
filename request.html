@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заявка</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<header class="site-header">
+      <div class="container header__row">
+        <div class="flex">
+          <p class="name">D-SYSTEMS ENGINEERING</p>
+          <a class="brand" href="index.html" aria-label="На главную">
+            <img src="img/logo.png" alt="logo" class="brand__logo" />
+          </a>
+        </div>
+
+        <nav class="header-nav" aria-label="Основное меню">
+          <a class="header-nav__link" href="more.html?type=elect" data-nav="elect">Электромонтаж</a>
+          <a class="header-nav__link" href="more.html?type=voda" data-nav="voda">Водоснабжение</a>
+          <a class="header-nav__link" href="more.html?type=ac" data-nav="ac">Кондиционеры</a>
+          <a class="header-nav__link" href="request.html" aria-current="page">Заявка</a>
+        </nav>
+      </div>
+    </header>
+<body>
+    <div class="containers">
+        <h1>Оставить заявку</h1>
+        <form id="orderForm">
+            <div class="form-section">
+                <h2>Данные заявки</h2>
+
+                <div class="form-group">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" name="name" placeholder="Как к вам обращаться?">
+                </div>
+
+                <div class="form-group">
+                    <label for="workType">Тип работ</label>
+                    <select id="workType" name="workType">
+                        <option value="Не указано" selected>Не указано</option>
+                        <option value="Сантехника">Сантехника</option>
+                        <option value="Электрика">Электрика</option>
+                        <option value="Кондиционеры">Кондиционеры</option>
+                    </select>
+                </div>
+
+                <div class="form-group required">
+                    <label for="description">Описание заказа <span class="req">*</span></label>
+                    <textarea id="description" name="description" rows="4" required
+                              placeholder="Опишите задачу максимально понятно и кратко"></textarea>
+                </div>
+            </div>
+
+            <!-- Контактные данные -->
+            <div class="form-section">
+                <h2>Контактные данные <span class="req">*</span></h2>
+                <p class="section-description">Укажите хотя бы один способ связи</p>
+                
+                <div id="contactsContainer">
+                    <!-- Контакты будут добавляться динамически -->
+                </div>
+
+                <button type="button" class="btn-add" onclick="addContact()">
+                    + Добавить контакт
+                </button>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">Отправить</button>
+            </div>
+        </form>
+
+        <div id="message" class="message hidden"></div>
+    </div>
+
+    <footer class="site-footer">
+      <small>© <time datetime="2026">2026</time> D-SYSTEMS ENGINEERING</small><br />
+      <small><a href="index.html#calc">Калькулятор</a> · <a href="index.html">Главная</a> · <a href="request.html">Оставить заявку</a> · <a href="../backend/templates/admin.html">Админ панель</a></small>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

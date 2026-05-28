@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #f5f6f7;
+    min-height: 100vh;
+}
+
+.containers {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 26px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+h1 {
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 26px;
+    letter-spacing: 0.2px;
+    font-size: 2rem;
+}
+
+h2 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-section {
+    margin-bottom: 26px;
+    padding: 18px;
+    border-radius: 16px;
+    background: rgba(11, 19, 32, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section-description {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(6, 11, 18, 0.55);
+    color: var(--text);
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: rgba(78, 161, 255, 0.55);
+    box-shadow: 0 0 0 3px rgba(78, 161, 255, 0.18);
+}
+
+textarea {
+    resize: vertical;
+    font-family: inherit;
+    min-height: 110px;
+}
+
+.contact-item {
+    background: rgba(6, 11, 22, 0.7);
+    padding: 14px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+
+}
+
+.contact-row {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.contact-type {
+    flex: 0 0 170px;
+}
+
+.contact-value {
+    flex: 1;
+}
+
+.btn-remove {
+    background: rgba(220, 38, 38, 0.85);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 32px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: 0.2s;
+    backdrop-filter: blur(4px);
+}
+
+.btn-remove:hover {
+    background: #dc2626;
+            transform: scale(0.97);
+}
+
+.btn-add {
+    background: #111c2f;
+    border: 1px solid #2d3a5e;
+    color: #b9d0ff;
+    font-weight: 600;
+    padding: 14px 20px;
+    border-radius: 40px;
+    width: 100%;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.25s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            letter-spacing: 0.3px;
+            margin-top: 6px;
+}
+
+.btn-add:hover {
+    background: #1a2a46;
+            border-color: #5f7fbf;
+            color: white;
+            transform: translateY(-2px);
+}
+
+.form-actions {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.btn-submit {
+    margin-top: 6px;
+    padding: 12px 30px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(78, 161, 255, 0.20);
+    color: var(--text);
+    cursor: pointer;
+    font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn-submit:hover {
+    transform: translateY(-1px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.message.success {
+    background: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+.message.error {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.hidden {
+    display: none;
+}
+
+.required label .req, h2 .req {
+    color: #dc2626;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .contact-row {
+        flex-direction: column;
+    }
+
+    .contact-type {
+        flex: 1;
+    }
+}

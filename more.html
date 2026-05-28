@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Услуги и цены" />
+    <title>Услуги — D-SYSTEMS ENGINEERING</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/more.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header__row">
+        <div class="flex">
+          <p class="name">D-SYSTEMS ENGINEERING</p>
+          <a class="brand" href="index.html" aria-label="На главную">
+            <img src="img/logo.png" alt="logo" class="brand__logo" />
+          </a>
+        </div>
+
+        <nav class="header-nav" aria-label="Основное меню">
+          <a class="header-nav__link" href="more.html?type=elect" data-nav="elect">Электромонтаж</a>
+          <a class="header-nav__link" href="more.html?type=voda" data-nav="voda">Водоснабжение</a>
+          <a class="header-nav__link" href="more.html?type=ac" data-nav="ac">Кондиционеры</a>
+          <a class="header-nav__link" href="request.html">Заявка</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <h2 id="more-title">Услуги — услуги и цены</h2>
+      <div class="line2"></div>
+
+      <h3>Спектр услуг</h3>
+      <p>Цены ориентировочные — точную стоимость скажем после замера/осмотра.</p>
+
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th scope="col">Услуга</th>
+            <th scope="col">Цена</th>
+            <th scope="col">Примечание</th>
+          </tr>
+        </thead>
+        <tbody id="price-body"></tbody>
+      </table>
+
+      <div class="line2"></div>
+
+      <div class="calc-invite">
+        <p>
+          <strong>Хотите узнать примерную стоимость?</strong><br />
+          Воспользуйтесь калькулятором — это займёт меньше минуты.
+        </p>
+        <div class="calc__cta">
+          <a class="calc__btn calc__btn--link" href="index.html#calc">Открыть калькулятор</a>
+        </div>
+        <p class="calc-invite__note">Нужна консультация? <a id="more-request" href="request.html">Оставьте заявку</a>.</p>
+      </div>
+
+      <div class="line2"></div>
+
+      <h3>Портфолио выполненных работ</h3>
+      <p>Несколько примеров наших законченных заказов.</p>
+
+      <div class="portfolio-grid" id="portfolio-grid"></div>
+    </main>
+
+    <footer class="site-footer">
+      <small>© <time datetime="2026">2026</time> D-SYSTEMS ENGINEERING</small><br />
+      <small><a href="index.html#calc">Калькулятор</a> · <a href="index.html">Главная</a> · <a href="request.html">Оставить заявку</a> · <a href="../backend/templates/admin.html">Админ панель</a></small>
+    </footer>
+
+    <script src="js/more.js" defer></script>
+  </body>
+</html>
+
