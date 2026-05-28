@@ -1,5 +1,5 @@
 // API endpoint
-const API_URL = 'https://q013gkf2-8000.euw.devtunnels.ms/api/submit';
+const API_URL = 'https://https://1nkognit0-diploma.hf.space/api/submit';
 
 let contactCounter = 0;
 
