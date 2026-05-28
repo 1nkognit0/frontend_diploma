@@ -1,5 +1,5 @@
 // API endpoint
-const API_URL = 'https://https://1nkognit0-diploma.hf.space/api/submit';
+const API_URL = 'https://1nkognit0-diploma.hf.space/api/submit';
 
 let contactCounter = 0;
 
